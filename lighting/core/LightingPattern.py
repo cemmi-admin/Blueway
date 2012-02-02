@@ -1,5 +1,4 @@
 import time
-import sys
 
 N = 50
 M = 24
@@ -18,10 +17,9 @@ class LightingPattern(object):
         self.stop = False
         t0 = time.time()
         t = time.time()
-        while t < t0 + self.duration & (not self.stop):
+        while t < t0 + self.duration and not self.stop:
             self.display_pattern(t)
             t = time.time()
-
 
     def stop(self):
         self.stop = True

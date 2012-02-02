@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 
-import socket
-import threading, Queue
-import colormap;
-from numpy import shape,zeros,minimum,maximum,ravel;
+import colormap
+from numpy import  zeros,minimum,maximum,ravel;
 
 from socket import socket,AF_INET,SOCK_DGRAM
 

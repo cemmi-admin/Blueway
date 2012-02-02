@@ -23,13 +23,13 @@
 # omega -- Speed to rotate in hue / saturation.
 
 from numpy import *
-from LightingPattern import LightingPattern
-from teh_display import *
 from time import sleep as wakeup
+from lighting.display.teh_display import *
+from lighting.core import LightingPattern
 
 N = 50
 M = 24
-CM = 1-colormap.MATLAB_COLORMAP
+CM = 1- colormap.MATLAB_COLORMAP
 
 class Quadratic(LightingPattern):
     theta = 0

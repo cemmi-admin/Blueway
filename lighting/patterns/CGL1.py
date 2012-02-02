@@ -22,8 +22,8 @@
 
 import colorsys
 from numpy import *
-from LightingPattern import LightingPattern
-from teh_display import *
+from lighting.display.teh_display import *
+from lighting.core import LightingPattern
 
 N = 50
 M = 24

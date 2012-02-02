@@ -1,11 +1,13 @@
+import os
 from numpy import *;
 
 def load_colormap(file):
     return genfromtxt(file,delimiter=',');
-    
-MATLAB_COLORMAP = load_colormap('matlab.txt');
-HSV_COLORMAP = load_colormap('hsv.txt');
-LINES_COLORMAP = load_colormap('lines.txt');
+
+THIS_DIR = os.path.dirname(__file__)
+MATLAB_COLORMAP = load_colormap(os.path.join(THIS_DIR,'matlab.txt'))
+HSV_COLORMAP = load_colormap(os.path.join(THIS_DIR,'hsv.txt'))
+LINES_COLORMAP = load_colormap(os.path.join(THIS_DIR,'lines.txt'))
 
 # MATLAB_COLORMAP=zeros([64,3]);
 # MATLAB_COLORMAP[24:39,0] = linspace(0,1,15);

@@ -21,10 +21,10 @@
 
 import colorsys
 from numpy import *
-from LightingPattern import LightingPattern
-from teh_display import *
 from scipy.stats import poisson
 from time import sleep as wakeup
+from lighting.display.teh_display import *
+from lighting.core import LightingPattern
 
 N = 50
 M = 24

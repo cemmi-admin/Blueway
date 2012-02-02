@@ -1,7 +1,7 @@
 import scipy
 from numpy import *
-from LightingPattern import LightingPattern
-from teh_display import *
+from lighting.display.teh_display import teh_display
+from lighting.core import LightingPattern
 
 __author__ = 'Pevner'
 
@@ -13,7 +13,7 @@ class BlueCord(LightingPattern):
 
     def __init__(self, args):
         super(BlueCord, self).__init__(args)
-        self.blue = len(args) < 2 | int(args[1]) != 0
+        self.blue = len(args) < 2 or int(args[1]) != 0
 
         a = scipy.linspace(0, 2 * scipy.pi, K)
         q1 = scipy.sqrt(scipy.cos(a) ** 2)

@@ -24,10 +24,10 @@
 
 from numpy import *
 from scipy.signal import correlate2d
-from LightingPattern import LightingPattern
-from teh_display import *
 import colorsys
 from time import sleep as wakeup
+from lighting.display.teh_display import *
+from lighting.core import LightingPattern
 
 N = 50
 M = 24

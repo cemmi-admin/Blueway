@@ -18,6 +18,7 @@ class CompositePattern(LightingPattern):
         self.cycle_duration = duration
         if not args: self.duration = duration
 
+
     def display_pattern(self,t):
         i = bisect_right(self.transition_times, t % self.cycle_duration)
-        self.transition_patterns.get(self.transition_times[i-1]).pattern(t)
+        self.transition_patterns.get(self.transition_times[i-1]).display_pattern(t - self.transition_times[i-1])
